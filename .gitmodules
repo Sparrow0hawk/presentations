@@ -1,0 +1,3 @@
+[submodule "techtalk-vagrant/revealjs"]
+	path = techtalk-vagrant/revealjs
+	url = https://github.com/hakimel/reveal.js
