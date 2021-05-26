@@ -9,25 +9,16 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="./revealjs/dist/reset.css">
+  <link rel="stylesheet" href="./revealjs/dist/reveal.css">
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/custom.css" id="theme">
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="./revealjs/dist/theme/None.css" id="theme">
+  <link rel="stylesheet" href="src/custom.css"/>
 </head>
 <body>
   <div class="reveal">
@@ -45,7 +36,7 @@
 </small>
 <small class="float-right">
   <p>
-  <a href="https://sparrow0hawk.github.io/presentations/techtalk-vagrant">https://bit.ly/techtalk-vagrant</a>
+  <a href="https://arcleeds.github.io/Techtalks/techtalk-vagrant/#/title-slide">https://bit.ly/techtalk-vagrant</a>
 </p>
 </small>
 </section>
@@ -203,7 +194,7 @@
   <section id="vagrant-case-studies-intro" class="slide level2">
     <h1>Vagrant case studies </h1>
     <p>Test all this code out yourself using the vagrant_examples directory in the GitHub Repo for this presentation</p>
-    <a href=https://github.com/Sparrow0hawk/presentations/tree/master/techtalk-vagrant>https://github.com/Sparrow0hawk/presentations/techtalk-vagrant</a>
+    <a href=https://github.com/Sparrow0hawk/presentations/tree/master/techtalk-vagrant>https://github.com/ARCLeeds/Techtalks/tree/master/techtalk-vagrant/vagrant_examples</a>
   </section>
   <section id="vagrant-case-studies-ubuntu" class="slide level2">
     <h2>Vagrant case studies </h2>
@@ -296,8 +287,8 @@
 <section id="further-coding" class="slide level2">
   <h2>Further coding/reading</h2>
   <ul>
-    <li><a href="https://sparrow0hawk.github.io/presentations/techtalk-vagrant/#/title-slide">These slides</a></li>
-    <li><a href="https://github.com/Sparrow0hawk/presentations/tree/master/techtalk-vagrant">Code used in case studies</a></li>
+    <li><a href="https://arcleeds.github.io/Techtalks/techtalk-vagrant/#/title-slide">These slides</a></li>
+    <li><a href="https://github.com/ARCLeeds/Techtalks/tree/master/techtalk-vagrant/vagrant_examples">Code used in case studies</a></li>
     <li><a href="https://www.vagrantup.com/intro/getting-started/index.html">Vagrant documentation</a></li>
     <li><a href="https://github.com/iJackUA/awesome-vagrant">Awesome Vagrant stuff list </a></li>
   </ul>
@@ -325,22 +316,25 @@ max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msall
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./revealjs/dist/reveal.js"></script>
+
+  <script src="./revealjs/plugin/notes/notes.js"></script>
+  <script src="./revealjs/plugin/search/search.js"></script>
+  <script src="./revealjs/plugin/zoom/zoom.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
         ]
       });
     </script>
